@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AquaLoop | Smart Campus Water Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="brand">
+
+            <div class="logo">💧</div>
+
+            <div>
+                <h1>AquaLoop</h1>
+                <p>SMART CAMPUS WATER MANAGEMENT</p>
+                <span>Government Engineering College, Kozhikode</span>
+            </div>
+
+        </div>
+
+        <div class="online">
+            <span></span>
+            System Online
+        </div>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <div class="section-title">
+
+            <div>
+                <h2>Water Overview</h2>
+                <p>Live monitoring dashboard</p>
+            </div>
+
+            <div class="demo">Demo Mode</div>
+
+        </div>
+
+
+        <!-- Water Cards -->
+        <section class="cards">
+
+            <div class="card">
+                <div class="card-icon">🛢</div>
+                <h3 id="availableWater">7,500 L</h3>
+                <p>Tank capacity available</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🌧</div>
+                <h3>2,400 L</h3>
+                <p>Rainwater collected</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>125 L</h3>
+                <p>Today's consumption</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">♻</div>
+                <h3>850 L</h3>
+                <p>Water reused</p>
+            </div>
+
+        </section>
+
+
+        <!-- Tank Monitoring -->
+        <section class="panel">
+
+            <div class="panel-heading">
+
+                <div>
+                    <h2>Storage Tank Monitoring</h2>
+                    <p>Underground Tank 01</p>
+                </div>
+
+                <strong id="percentage">75%</strong>
+
+            </div>
+
+
+            <div class="progress-background">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+
+            <p class="tank-info" id="tankInfo">
+                7,500 L stored out of 10,000 L
+            </p>
+
+
+            <div class="tank-controls">
+
+                <button onclick="changeTank(-5)">
+                    −
+                </button>
+
+                <button onclick="changeTank(5)">
+                    +
+                </button>
+
+                <span>Adjust demo tank level</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Leakage Detection -->
+        <section class="panel leakage-panel">
+
+            <div class="panel-heading">
+
+                <div>
+                    <h2>Leakage Detection</h2>
+                    <p>Water flow monitoring system</p>
+                </div>
+
+                <div class="leak-status normal" id="leakStatus">
+                    <span></span>
+                    No Leakage
+                </div>
+
+            </div>
+
+
+            <div class="leakage-content">
+
+                <div class="leakage-icon">💧</div>
+
+                <div>
+                    <h3 id="leakMessage">Water flow is operating normally</h3>
+
+                    <p id="leakDescription">
+                        No unusual water flow has been detected.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <button class="test-button" onclick="testLeakage()">
+                Test Leakage Detection
+            </button>
+
+        </section>
+
+
+        <!-- System Status -->
+        <section class="panel">
+
+            <h2>System Status</h2>
+
+            <div class="status-list">
+
+                <div class="status-item">
+                    <span class="status-dot green"></span>
+                    <div>
+                        <strong>Rainwater Collection</strong>
+                        <p>System ready for collection</p>
+                    </div>
+                </div>
+
+
+                <div class="status-item">
+                    <span class="status-dot green" id="tankDot"></span>
+                    <div>
+                        <strong>Storage Tank</strong>
+                        <p id="tankStatusText">Water level is normal</p>
+                    </div>
+                </div>
+
+
+                <div class="status-item">
+                    <span class="status-dot green" id="leakDot"></span>
+                    <div>
+                        <strong>Leakage Monitoring</strong>
+                        <p id="leakStatusText">No leakage detected</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Project Note -->
+        <section class="project-note">
+
+            <h3>AquaLoop Prototype</h3>
+
+            <p>
+                This dashboard is a demonstration prototype for smart campus
+                water management. Tank levels and leakage alerts are simulated
+                for demonstration purposes.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        AquaLoop • Campus Water Audit & Rainwater Harvesting Project
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
